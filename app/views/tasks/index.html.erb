@@ -1,13 +1,15 @@
 <h1>My tasks </h1>
 
+<ul>
+  <% @tasks.each do |task| %>
+    <li>
+      <input type="checkbox" id="task" name="title">
+      <%= link_to task.title, task_path(task) %> <!-- i want to know what happens in this line of code in block diagrams
 
-<% @tasks.each do |task| %>
-
-<input type="checkbox" id="task" name="title">
-<label for="vehicle1"> <%= task.title %> </label><br>
-
-<% end %>
-
+      <!-- <a href="/tasks/<%= task.id  %>"><%= task.title %></a> -->
+    </li>
+  <% end %>
+</ul>
 
 
 
